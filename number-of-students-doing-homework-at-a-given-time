@@ -1,0 +1,11 @@
+class Solution:
+    def busyStudent(self, startTime: List[int], endTime: List[int], queryTime: int) -> int:
+        students_studying_more = 0
+        for i in range(len(startTime)):
+            if (queryTime >= startTime[i]) and (queryTime <= endTime[i]):
+                students_studying_more += 1
+        return students_studying_more
+       
+ As per the question, it has mentioned that if the query time is moreThan or Equalto start time and less than equal to end time than the we count and increment it by one.:
+ Return the number of students doing their homework at time queryTime. 
+ More formally, return the number of students where queryTime lays in the interval [startTime[i], endTime[i]] inclusive.
